@@ -1,5 +1,5 @@
 %% Funzione per la risoluzione con ode45 e ode15s del Modello OREGONATOR
-function Risolve_Oregonator()
+function [tempo45,y45,tempo15s,y15s] = Risolve_Oregonator()
 %Impostazione coefficienti
 q = 9*10^-5;
 e = 10^-2;
