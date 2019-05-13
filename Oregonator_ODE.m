@@ -1,5 +1,5 @@
 %% Funzione del modello ODE Oregonator per la descrizione di reazioni tra 3 sostanze chimiche
-function y_primo = Oregonator_ODE(t,y)
+function y_primo = Oregonator_ODE(t,y,q,e,g,f)
 
 %% MODELLO ODE
 %%
@@ -17,12 +17,6 @@ Di conseguenza
 y1'(prima equaz,prima incog) = q*y(sec incog) - y(prima incog)*y(sec incog)
 ecc.. variando la i per indicare il numero di equazioni
 %}
-
-q = 9*10^(-5) ;
-e = 10^(-2) ;
-g = 2.5*10^(-5) ;
-f = 0.8;
-
 
 y_primo1 = (q*y(2)-y(1)*y(2)+y(1)*(1-y(1)))/e;
 y_primo2 = (-q*y(2)-y(1)*y(2)+f*y(3))/g;

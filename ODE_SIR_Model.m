@@ -17,7 +17,6 @@ Di conseguenza
 y'(prima equaz,prima incog) = -a*y(prima incog)*y(sec incog)
 ecc.. variando la i per indicare il numero di equazioni
 %}
-%viscottic
 b=0.1;
 y_primo(1,1) = -a*y_iniziale(1)*y_iniziale(2);
 y_primo(2,1) = a*y_iniziale(1)*y_iniziale(2) - b*y_iniziale(2);
