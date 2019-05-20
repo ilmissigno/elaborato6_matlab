@@ -9,14 +9,11 @@ f = 0.8;
 t = [0 50];
 y0 = [0.2 0.2 0.2];
 
-%Impostazione valori di tolleranza dell'errore
+%Impostazione valori di tolleranza 
 opz = odeset('RelTol',10e-6,'AbsTol',10e-7);
 %Risoluzione con ode45
-%[tempo45,y45] = ode45(@Oregonator_ODE,t,[y1_0 y2_0 y3_0],opz,q,e,g,f);
-
 profile on
 tic
-%[tempo45,y45] = ode45(@Oregonator_ODE,t,y0,opz);
 [tempo45,y45] = ode45(@Oregonator_ODE,t,y0,opz,q,e,g,f);
 time = toc;
 fprintf('[ODE45],Tempo: %d , Numero di punti: %d\n',time,length(y45));
@@ -24,7 +21,6 @@ fprintf('[ODE45],Tempo: %d , Numero di punti: %d\n',time,length(y45));
 pause(2)
 tic
 %Risoluzione con ode15s
-%[tempo15s,y15s] = ode15s(@Oregonator_ODE,t,y0,opz);
 [tempo15s,y15s] = ode15s(@Oregonator_ODE,t,y0,opz,q,e,g,f);
 time = toc;
 %Stampa dei risultati

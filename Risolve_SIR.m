@@ -5,7 +5,7 @@ t = [0 20];
 s0 = 199;
 i0 = 1;
 r0 = 0;
-%Impostazione valori di tolleranza dell'errore
+%Impostazione valori di tolleranza 
 opzione = odeset('RelTol',10^-6,'AbsTol',10^-7);
 %Calcolo del modello attraverso ode45
 [time,result] = ode45(@ODE_SIR_Model,t,[s0 i0 r0],opzione,a);
