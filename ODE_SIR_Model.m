@@ -7,7 +7,7 @@ function y_primo = ODE_SIR_Model(t,y_iniziale,a)
 S'(t) = -aS(t)I(t)
 I'(t) = aS(t)I(t) - bI(t)
 R'(t) = bI(t)
-con t ? [0,20] , S(0) = 199 , I(0) = 1 , R(0) = 0
+con t [0,20] , S(0) = 199 , I(0) = 1 , R(0) = 0
 b costante = 0.1
 %}
 b=0.1;
